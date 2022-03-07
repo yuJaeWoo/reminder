@@ -1,0 +1,10 @@
+#!/bin/sh
+ssh dev@192.168.0.210 <<EOF
+    mkdir reminder
+    cd ~/reminder	
+    git pull origin master
+    nvm install 14.17.0
+    npm install
+    npm run start
+    exit
+EOF
